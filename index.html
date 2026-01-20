@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sesión 1 - Javascript</title>
+    <style>
+        .sombra{
+            box-shadow: 10px 10px 5px 0px;
+        }
+
+        .cuadro{
+            border: 1px solid;
+            width: 150px;
+            height: 150px;
+        }
+
+        .fondo{
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <h1>Sesión 1 JavaScript</h1>
+    <div class="cuadro sombra">
+        Hola
+    </div>
+    <script>
+        console.log("Hola mundo!!")
+        /*document.write("Hola Javascript")*/
+        document.write("<h1>Título chuleta</h1>")
+        let miNombre="Laia" //Definimos la variable miNombre
+        document.write("Hola"+" "+miNombre+" ¡que tal!")
+        console.log(miNombre)
+        let div=document.querySelector(".cuadro")
+        //console.log(div) //Escribir lo que hay en el div para depurar la consola
+        console.log(div.classList)
+        div.classList.remove("sombra") //Quitar clase sombra
+        div.classList.add("fondo") //Añadir clase
+        // Mola Javascript
+    </script>
+</body>
+</html>
