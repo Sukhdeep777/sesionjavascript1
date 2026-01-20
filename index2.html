@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
+        body{
+            padding: 0;
+            margin: 0;
+        }
 
         .color-red{
             color: red;
@@ -23,10 +27,22 @@
             align-items: center;
             border-radius: 32px;
         }
+
+        .fondo-negro{
+            background-color: black;
+            color: white;
+        }
+
+        .tamaño{
+            font-size: 50px;
+        }
     </style>
 </head>
 <body>
-    <h1 id="miTitulo" class="color-red">Pràctica Java</h1>
+    <header class="tamaño">
+        Pràctica JavaScript
+    </header>
+    <h1 id="miTitulo" class="color-red">Empezamos</h1>
 <script>
     document.write("<h2>Utilizando Javascript</h2>") //Hacemos que en el documento aparezca un subtitulo con el texto escrito con su etiqueta.
     let miNombre="Sukhdeep" //Hacemos una variable llamada miNombre en el qual produzca mi nombre
@@ -35,6 +51,12 @@
     document.write("<br>"+"Hola "+miNombre) //Ponemos una etiqueta <br> para que haya un salto de linea y tengamos dos lineas.
     let div=document.querySelector("#miTitulo") //Seleccionados al div que tiene el id miTitulo
     div.classList.add("title") //Esta linea de programación sirve para añadir la classe title al div seleccionado apartir del id
+    console.log(div.classList) //En la consola podemos depurar que se vean las classes de¡l div seleccionado
+    // Creamos una nueva variable llamado al header para poner la classe fondo-negro a este
+    let header=document.querySelector(".tamaño")
+    header.classList.add("fondo-negro")
+    // Le he quitado la classe title para que se viese de color rojo
+    div.classList.remove("title")
 </script>
 </body>
 </html>
