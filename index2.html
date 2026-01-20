@@ -5,12 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
+
         .color-red{
             color: red;
         }
 
-        .button{
-            font-size: 32px;
+        .title{
+            text-align: center;
+            text-decoration: underline;
+            color: blue;
+            background-color: white;
+            width: 150px;
+            height: 80px;
+            border: 1px solid black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 32px;
         }
     </style>
 </head>
@@ -22,7 +33,8 @@
     document.write(miNombre) //Ponemos que en el documento salga mi nombre utilitzando la variable miNombre
     console.log(miNombre) //Depuramos para que en la consola salga mi nombre
     document.write("<br>"+"Hola "+miNombre) //Ponemos una etiqueta <br> para que haya un salto de linea y tengamos dos lineas.
-    let div=document.querySelector("#miTitulo")
+    let div=document.querySelector("#miTitulo") //Seleccionados al div que tiene el id miTitulo
+    div.classList.add("title") //Esta linea de programación sirve para añadir la classe title al div seleccionado apartir del id
 </script>
 </body>
 </html>
