@@ -4,11 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        .color-red{
+            color: red;
+        }
+    </style>
 </head>
 <body>
-
+    <h1 id="miTitulo" class="color-red">Pràctica Java</h1>
 <script>
-    
+    document.write("<h2>Utilizando Javascript</h2>") //Hacemos que en el documento aparezca un subtitulo con el texto escrito con su etiqueta.
+    let miNombre="Sukhdeep" //Hacemos una variable llamada miNombre en el qual produzca mi nombre
+    document.write(miNombre) //Ponemos que en el documento salga mi nombre utilitzando la variable miNombre
+    console.log(miNombre) //Depuramos para que en la consola salga mi nombre
+    document.write("<br>"+"Hola "+miNombre) //Ponemos una etiqueta <br> para que haya un salto de linea y tengamos dos lineas.
+    let div=document.querySelector("#miTitulo")
 </script>
 </body>
 </html>
