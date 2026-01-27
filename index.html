@@ -26,7 +26,7 @@
         Hola
     </div>
     <form>
-        <input type="text" name="" id="" placeholder="Pon aqui tu nombre" value="Paco">
+        <input type="text" name="" id="nombre" placeholder="Pon aqui tu nombre" value="Paco">
     </form>
     <script>
         console.log("Hola mundo!!") /*Para depurar el codigo*/
@@ -46,6 +46,11 @@
         // El document.write no se utiliza, lo que si se utiliza es el console.log para depurar codigo(revisar)
 
         div.innerHTML="<h1>Barcelona</h1>" /*Para cambiar el texto que hay dentro del div seleccionado*/
+        const inputNombre=document.querySelector("#nombre") 
+        /*Creamos una constante seleccionando con una id*/ 
+        console.log(inputNombre.id) // Para ver lo que hay dentro de un id
+        console.log(inputNombre.value) // Para ver lo que hay dentro del value que hemos asignado
+        console.log(inputNombre.placeholder) //Para ver el texto que hemos puesto del placeholder
     </script>
 </body>
 </html>
