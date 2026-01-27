@@ -28,6 +28,9 @@
     <form>
         <input type="text" name="" id="nombre" placeholder="Pon aqui tu nombre" value="Paco">
     </form>
+    <div id="resultado">
+
+    </div>
     <script>
         console.log("Hola mundo!!") /*Para depurar el codigo*/
         /*document.write("Hola Javascript")*/
@@ -51,6 +54,23 @@
         console.log(inputNombre.id) // Para ver lo que hay dentro de un id
         console.log(inputNombre.value) // Para ver lo que hay dentro del value que hemos asignado
         console.log(inputNombre.placeholder) //Para ver el texto que hemos puesto del placeholder
+        inputNombre.value="Paconi" //para cambiar el valor del input
+
+        function saludar(saludo){
+            console.log(saludo)
+        }
+        // Se puede poner un parametro
+        // Hemos creado una funciona que en la consola ponga que pasa!, el parentesis indica que es una función a si que hay que hacerlo.
+        saludar("Hola") // Asi llamamos a la funciona y se hace
+        saludar("Bacalao")
+        saludar("Que pasa")
+        
+        div.addEventListener("click",contador) // Cada vez que hagamos click llamamos a la funcion saludar y hemos puesto un escuchador de eventos
+        let cuenta=0
+        function contador(){
+            console.log("cuenta vale: "+cuenta) // Saca por consola lo que vale cuenta
+            cuenta=cuenta+1 // Que la cuente sume 1 cada vez que le des click
+        }
     </script>
 </body>
 </html>

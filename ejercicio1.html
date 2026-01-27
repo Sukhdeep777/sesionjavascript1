@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 1</title>
+</head>
+<body>
+    <form action="">
+        <input type="text" value="Paconi" id="inputNombre">
+    </form>
+    <div id="resultado">
+
+    </div>
+    <script>
+        let inputNombre=document.querySelector("#inputNombre")
+        console.log(inputNombre)
+        console.log(inputNombre.value)
+        let resultado=document.querySelector("#resultado")
+        console.log(resultado)
+        inputNombre.addEventListener("input",escribir)
+        function escribir(){
+            console.log(inputNombre.value)
+            resultado.innerHTML=inputNombre.value
+        }
+    </script>
+</body>
+</html>
