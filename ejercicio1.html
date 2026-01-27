@@ -13,13 +13,14 @@
 
     </div>
     <script>
-        let inputNombre=document.querySelector("#inputNombre")
+        let inputNombre=document.querySelector("#inputNombre") //Creamos una variable seleccionando el input por el id que hemos puesto
         console.log(inputNombre)
         console.log(inputNombre.value)
-        let resultado=document.querySelector("#resultado")
-        console.log(resultado)
-        inputNombre.addEventListener("input",escribir)
-        function escribir(){
+        // Aqui vemos en la depuración de la consola si esta bien y sale el input y su valor
+        let resultado=document.querySelector("#resultado") // Seleccionamos el id del div que en este caso es resultado creando otra variable
+        console.log(resultado) //Aqui depuramos para revisar si esta bien seleccionado
+        inputNombre.addEventListener("input",escribir) //Ponemos un escuchador de eventos a la variable del input i le ponemos dos parametros, primero "input" para que vea los cambios que hagamos en el input y el segundo parametro es escribir que es la funcion que crearemos a continuacion.
+        function escribir(){ //Creamos la funcion escribir que se ejecutara cada vez que haya un cambio en el input, haciendo que con la variable del div le ponemos el innerHTML para que copie lo del input al div resultado y despues un console.log para ver en la consola cada vez que se ejecuta.
             console.log(inputNombre.value)
             resultado.innerHTML=inputNombre.value
         }
