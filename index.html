@@ -27,14 +27,17 @@
     </div>
     <a href="index2.html">Ejercicio</a>
     <script>
-        console.log("Hola mundo!!")
+        console.log("Hola mundo!!") /*Para depurar el codigo*/
         /*document.write("Hola Javascript")*/
-        document.write("<h1>Título chuleta</h1>")
-        let miNombre="Laia" //Definimos la variable miNombre
+        document.write("<h1>Título chuleta</h1>") /*Para escribir en el documento*/
+        let miNombre="Laia" //Definimos la variable miNombre, una variable des una caja que podemos poner cosas y la constante que puedes poner cosas. La variable puedes cambiar i en la constante no.
+        miNombre= "Pepa" /*No se pone let pq la variable ya esta creada, let se pone la primera vez. Si fuera const no se podria cambiar pq es una constante (Si es const en vez de let*/
         document.write("Hola"+" "+miNombre+" ¡que tal!")
         console.log(miNombre)
-        let div=document.querySelector(".cuadro")
+        const div=document.querySelector(".cuadro") /*Para seleccionar el documento utilizamos document.queryselector y entre parentesis como seleccionarlo.Para mas de uno querySelectorAll*/
         //console.log(div) //Escribir lo que hay en el div para depurar la consola
+        console.log(div) /*Para ver el div*/
+        console.log(div.innerHTML) /*sale lo que hay en el interior del div que en este caso es Hola.*/
         console.log(div.classList)
         div.classList.remove("sombra") //Quitar clase sombra
         div.classList.add("fondo") //Añadir clase
