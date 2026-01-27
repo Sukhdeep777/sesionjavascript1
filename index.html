@@ -25,7 +25,9 @@
     <div class="cuadro sombra">
         Hola
     </div>
-    <a href="ejerciciopractico.html">Ejercicio</a>
+    <form>
+        <input type="text" name="" id="" placeholder="Pon aqui tu nombre" value="Paco">
+    </form>
     <script>
         console.log("Hola mundo!!") /*Para depurar el codigo*/
         /*document.write("Hola Javascript")*/
@@ -41,7 +43,9 @@
         console.log(div.classList) /*Para ver las clases que tiene*/
         div.classList.remove("sombra") //Quitar clase sombra
         div.classList.add("fondo") //Añadir clase
-        // Mola Javascript
+        // El document.write no se utiliza, lo que si se utiliza es el console.log para depurar codigo(revisar)
+
+        div.innerHTML="<h1>Barcelona</h1>" /*Para cambiar el texto que hay dentro del div seleccionado*/
     </script>
 </body>
 </html>
