@@ -67,6 +67,17 @@
             div.innerHTML = "Has clicat "+comptador+" vegades"
         }
 
+        //Exercici 8
+        const div1 = document.querySelector("#resultado") // Una constante del div que tiene resultado
+        button.addEventListener("click",copiar) // Añadimos un evento de escuchador al boton, para que cuando le demos click se cumpla la función copiar
+        function copiar(){ // En esta funcion si el valor del input es = a nada el div que tiene el id resultado pondra No ha escrito nada, pero en cambio si ha puesto algo se copiara lo que hayas puesto en el valor del input.
+            if (input.value === ""){
+                div1.innerHTML = "No has escrit res"
+            } else {
+                div1.innerHTML = input.value
+            }
+        }
+       
 
       // El teu codi aquí
     </script>
