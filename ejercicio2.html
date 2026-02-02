@@ -59,7 +59,13 @@
         }
 
         // Exercici 7
-
+        let comptador = 0 //Creamos una variable comptador con el valor 0
+        div.addEventListener("click",comptadorclick) // Hacemos que el div con el id #contenido cada vez que haga click efectue la funcion comptar click
+        function comptadorclick(){ //En esta funcion la variable comptador se sumara el numero de¡l comptador que es 0 +1 por cada click y hacemos que con el inner.html cada vez que cliquemos se actualizara el texto y pondra las veces que hemos clicado.
+            console.log(comptador)
+            comptador=comptador+1
+            div.innerHTML = "Has clicat "+comptador+" vegades"
+        }
 
 
       // El teu codi aquí
