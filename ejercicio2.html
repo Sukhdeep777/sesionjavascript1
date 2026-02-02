@@ -26,12 +26,24 @@
     <div id="resultado"></div>
     <script>
         //Exercici 1 
-        console.log("Hola, món!")
+        console.log("Hola, món!")  //Para poner en la consola Hola mundo
 
         //Exercici 2
         let nom = "Sukhdeep"
         let cognom = "Singh"
-        console.log("El meu nom és "+nom+" "+cognom)
+        console.log("El meu nom és "+nom+" "+cognom) //Creamos dos variables uno con nuestro nombre y apellido, para despues que en la consola juntar las dos variables y crear una frase.
+
+        // Exercici 3
+        function saluda(nom){
+            console.log("Hola, "+ nom +" !")
+        }
+        saluda("Marc");
+        saluda("Laura");
+        saluda("Pep");
+
+        // Exercici 4
+        const div = document.querySelector("#contenido")
+        div.innerHTML = "<strong>He canviat el text!</strong>."
       // El teu codi aquí
     </script>
   </body>
