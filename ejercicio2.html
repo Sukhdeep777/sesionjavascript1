@@ -72,12 +72,38 @@
         button.addEventListener("click",copiar) // Añadimos un evento de escuchador al boton, para que cuando le demos click se cumpla la función copiar
         function copiar(){ // En esta funcion si el valor del input es = a nada el div que tiene el id resultado pondra No ha escrito nada, pero en cambio si ha puesto algo se copiara lo que hayas puesto en el valor del input.
             if (input.value === ""){
-                div1.innerHTML = "No has escrit res"
+              div1.innerHTML = "No has escrit res"
             } else {
-                div1.innerHTML = input.value
+              div1.innerHTML = input.value
             }
         }
        
+        // Exercici 9
+        div.addEventListener("click",intercambiar) // Ponemos un escuchador de eventos al div para que cuando cliquemos haga la funcion de intercambiar
+        function intercambiar(){ // Creamos la funcion y dentro seleccionamos al div con la clase de listas para ponerle toggle
+          div.classList.toggle("destacado") // Si ponemos que el div con su lista de classes en vez de poner add i remove ponemos toggle, lo que hacemos es que se intercambie es decir cuando no hay ponga y cuando haya quite
+        }
+
+        // OTRA FORMA DEL EXERCICI 9
+        function intercambiar(){
+          if(div.classList.contains("destacado")){ //Si el div contenido contiene la clase lista, lo que haremos es quitarle la clase destacado si no la tiene pues la añadiremos.
+            div.classList.remove("destacado")
+          } else{
+            div.classList.add("destacado")
+          }
+        }
+
+        // Exercici 10 
+        const titulo = document.querySelector("#titulo")
+        titulo.innerHTML = "Salutació"
+        button.addEventListener("click",missatge) // Ponemos un escuchador de eventos al boton al darle click para que haga la funcion mensaje
+        function missatge(){ // EN esta funcion si el valor del input no hay nada se pondra el texto de porfavor pon un nombre i si pone uno que saluda al valor del input añadido por el usuario
+          if(input.value.trim() === ""){ // Aqui ponemos el .trim porque es una variable que elimina los espacios de la izquierda y de la derecha, lo que hace es que si ponemos espacios y no hay trim lo considera como texto y ejecuta el texto de Hola soy (espacio en blanco) y no queremos eso a si que ponemos trim para eliminar los espacios en blanco y que salga que tengas que poner tu nombre.
+            div1.innerHTML = "Si us plau, escriu el teu nom."
+          } else{
+            div1.innerHTML = "Hola, "+input.value+" !" 
+          }
+        }
 
       // El teu codi aquí
     </script>
