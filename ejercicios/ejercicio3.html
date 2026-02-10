@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .green{
+            border: 1px solid green;
+        }
+
+        .red{
+            border: 1px solid red;
+        }
+    </style>
+</head>
+<body>
+    <label for="edad">Edad</label>
+    <input type="number" id="edad">
+    <button id="btn" type="submit">Entrar</button>
+    <div id="resultado">
+
+    </div>
+    <script>
+        let edad = document.querySelector("#edad")
+        let button = document.querySelector("#btn")
+        let resultado = document.querySelector("#resultado")
+        // Seleccionalos al input, botón i al div
+        function verificar(){
+            if(edad.value  >= 18){
+                resultado.classList.add("green")
+                resultado.classList.remove("red")
+                console.log("Es mayor")
+            }else{
+                resultado.classList.add("red")
+                resultado.classList.remove("green")
+                console.log("Es menor")
+            }
+            resultado.innerHTML = edad.value
+        }
+        // Crea,una función con una condicional que si tiene igual o mayor de 18 añor que ponga la clase verde en cambio si no que lo ponga rojo. En el if añadiremos la clase green y quitaremos la roja y en el else lo contrario.
+        button.addEventListener("click",verificar)
+        // Pones un botón con un escuchador de eventos que al darle click al botón, funcione o se produzca la función verificar.
+    </script>
+</body>
+</html>
