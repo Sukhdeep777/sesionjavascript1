@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <select name="" id="select">
+        <option value="Otro">Otro</option>
+        <option id="bmw">BMW</option>
+        <option id="mercedes">MERCEDES</option>
+    </select>
+    <button id="btn">Ver</button>
+    <div id="resultado">
+
+    </div>
+    <script>
+        let bmw = document.querySelector("#bmw")
+        let mercedes = document.querySelector("#mercedes")
+        let button = document.querySelector("#btn")
+        let resultado = document.querySelector("#resultado")
+        function imagenes(){
+            if(mercedes){
+                resultado.src = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQNbRhB2en5BbJ-qE9PgmtpIdR-Wmt-FnqBCA&s";
+            }else if(bmw) {
+                resultado.src = "https://www.cocheglobal.com/uploads/s1/96/40/68/6/nuevo-bmw-serie-4-coupe.jpeg";
+            }else {
+                resultado.src = ""
+                console.log("nothing")
+            }
+        }
+        button.addEventListener("click",imagenes)
+        console.log(mercedes)
+        console.log(button)
+    </script>
+</body>
+</html>
