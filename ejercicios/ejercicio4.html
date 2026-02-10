@@ -4,35 +4,55 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        select{
+            border-radius: 8px;
+            width: 200px;
+            height: 30px;
+            color: whitesmoke;
+            background: #000;
+        }
+
+        .container{
+            margin-bottom: 50px;
+        }
+
+        img{
+                width: auto;
+                height: auto;
+        }
+    </style>
 </head>
 <body>
-    <select name="" id="select">
-        <option value="Otro">Otro</option>
-        <option id="bmw">BMW</option>
-        <option id="mercedes">MERCEDES</option>
-    </select>
-    <button id="btn">Ver</button>
-    <div id="resultado">
-
+    <div class="container">
+        <select id="sele">
+            <option value="Otro">Otro</option>
+            <option value="bmw">BMW</option>
+            <option value="mercedes">MERCEDES</option>
+        </select>
+        <button id="btn">Ver</button>  
     </div>
+    <div id="resultado">
+        <img id="img" src="" alt="">
+    </div>   
     <script>
-        let bmw = document.querySelector("#bmw")
-        let mercedes = document.querySelector("#mercedes")
         let button = document.querySelector("#btn")
-        let resultado = document.querySelector("#resultado")
+        let select = document.querySelector("#sele")
+        let img = document.querySelector("#img")
+        // Creamos las variables, donde seleccionamos al botón, al select i a la etiqueta img.
+        console.log(img)
         function imagenes(){
-            if(mercedes){
-                resultado.src = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQNbRhB2en5BbJ-qE9PgmtpIdR-Wmt-FnqBCA&s";
-            }else if(bmw) {
-                resultado.src = "https://www.cocheglobal.com/uploads/s1/96/40/68/6/nuevo-bmw-serie-4-coupe.jpeg";
-            }else {
-                resultado.src = ""
-                console.log("nothing")
+            if(select.value == "bmw"){
+                img.src = "https://img.freepik.com/fotos-premium/auto-deportivo-poderoso-gris-brillante-bmw-vector-ilustracion-editable-modelo-automovil-lujo-bmw-vector-aislado-sobre-fondo-blanco_967785-51576.jpg?semt=ais_hybrid&w=740&q=80"
+            } else if (select.value == "mercedes"){
+                img.src = "https://cdn.pixabay.com/photo/2020/02/29/17/00/car-4890611_960_720.png"    
+            } else{
+                img.src = "https://img.freepik.com/premium-vector/nothing-rubber-stamp-seal-vector_140916-33117.jpg?semt=ais_hybrid&w=740&q=80"
             }
+            img.classList.add("container-img")
         }
+
         button.addEventListener("click",imagenes)
-        console.log(mercedes)
-        console.log(button)
     </script>
 </body>
 </html>
