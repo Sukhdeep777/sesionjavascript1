@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juego</title>
+    <style>
+        .body{
+            width: 100%;
+            height: 100%;
+        }
+
+        main{
+            display: flex;
+            justify-content: center;
+            margin-top: 50px;
+        }
+
+        .cuadro{
+            border: 1px solid #000;
+            width: 300px;
+            height: 300px;
+            position: relative;
+            background-color: #000;
+        }
+
+        .coche{
+            width: 30px;
+            height: 60px;
+            background: red;
+            position: absolute;
+            bottom: 0;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <div class="cuadro">
+
+            <div class="coche">
+            </div>
+        </div>
+    </main>
+    <script>
+        let coche = document.querySelector(".coche")
+        //  Creamos una variable que asigne el coche que esta en el interior de su div
+        let X = 0
+        let Y = 0
+        // Creamos otra variable que sea la de posición que tenga un 0
+        console.log(coche)
+        //  Aqui depuramos para ver que asigna bien el div que tiene la clase coche
+        function mover(){ // Una funcion llamada mover
+            if (event.key == "a"){
+                coche.style.left = X = X + -5 
+                coche.style.left = X + "px"
+            } else if (event.key == "d") {
+                coche.style.left = X = X + 5 
+                coche.style.left = X + "px"
+            } else if (event.key == "w"){
+                coche.style.bottom = Y = Y +5
+                coche.style.bottom = Y + "px"
+            } else if (event.key == "s"){
+                coche.style.bottom = Y = Y -5
+                coche.style.bottom = Y + "px"
+            } else{
+            }        
+
+            // Esto para hacer que si toca el borde se vuelva a la opcion principal pero si movemos el cuadrado los pixeles no seran exactos.
+
+            // if(X >= 270){
+            //     X = 0 
+            //     coche.style.left = 0
+            // } else if(X < 0){
+            //     X = 270
+            //     coche.style.bottom = 270
+            // } else if (Y >= 240){
+            //     Y = 0
+            //     coche.style.bottom = 0
+            // } else if (Y < 0){
+            //     Y = 240
+            //     coche.style.bottom = 240
+            // }else{
+            //     console.log("0")
+            // }
+        }
+        window.addEventListener("keydown",mover)
+    </script>
+</body>
+</html>
