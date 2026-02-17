@@ -1,22 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Juego</title>
     <style>
-        .body{
+        .body {
             width: 100%;
             height: 100%;
         }
 
-        main{
+        main {
             display: flex;
             justify-content: center;
             margin-top: 50px;
         }
 
-        .cuadro{
+        .cuadro {
             border: 1px solid #000;
             width: 900px;
             height: 300px;
@@ -24,7 +25,7 @@
             background-color: #000;
         }
 
-        .coche{
+        .coche {
             width: 50px;
             height: 60px;
             position: absolute;
@@ -32,17 +33,18 @@
             background: red;
         }
 
-        .pacman-rg{
+        .pacman-rg {
             background: url(https://static.wikia.nocookie.net/memes-pedia/images/7/7d/1037621961.png/revision/latest?cb=20161014185223&path-prefix=es);
             background-size: cover;
         }
 
-        .pacman-iz{
+        .pacman-iz {
             background: url(https://i.redd.it/cvr6jhcpuybd1.png);
             background-size: cover;
         }
     </style>
 </head>
+
 <body>
     <main>
         <div class="cuadro">
@@ -51,7 +53,7 @@
             </div>
         </div>
     </main>
-    <script> 
+    <script>
         // SELECCIONAMOS LOS DIV
         let cuadro = document.querySelector(".cuadro")
         let coche = document.querySelector(".coche")
@@ -59,7 +61,7 @@
         let X = 0 // Horizontal 
         let Y = 0 // Vertical
         console.log(cuadro.clientWidth) // Con clientWidth podemos ver el tamaño del cuadro y cambiandolo por Height vemos la altura
-        console.log(cuadro.clientHeight) 
+        console.log(cuadro.clientHeight)
         console.log(coche.offsetHeight) // Podemos ver el Ancho y la altura del div con la clase coche
         console.log(coche.offsetWidth)
         // El clientWidth = Mide el espacio que hay dentro del elemento ( Cuenta de espacio todo menos el scroll y el borde )
@@ -74,45 +76,45 @@
             //  TECLAS DE MOVIMIENTO
             if (event.key == "a") { // Tecla A
                 coche.style.left = X = X + -5 // Restamos cada vez 5
-            } 
-            if (event.key == "d"){ // Tecla D
+            }
+            if (event.key == "d") { // Tecla D
                 coche.style.left = X = X + 5 // Sumamos cada vez 5
             }
-            if (event.key == "w"){ // Tecla W
+            if (event.key == "w") { // Tecla W
                 coche.style.bottom = Y = Y + 5
             }
-            if (event.key == "s"){ // Tecla S
-                coche.style.bottom = Y = Y + -5 
+            if (event.key == "s") { // Tecla S
+                coche.style.bottom = Y = Y + -5
             }
             // BORDES
-            if ( X > anchocuadro){ // Si toca la esquina derehca lo que ara es mandar a 0 pero restandole el propio valor del coche haciendo que este fuera del cuado, asi lo hacemos como si fuera un pacman.
+            if (X > anchocuadro) { // Si toca la esquina derehca lo que ara es mandar a 0 pero restandole el propio valor del coche haciendo que este fuera del cuado, asi lo hacemos como si fuera un pacman.
                 X = -anchocoche
             }
-            if ( X < -anchocoche){ // Si se pasa mas de -30px lo que hara es irse a la banda derecha
+            if (X < -anchocoche) { // Si se pasa mas de -30px lo que hara es irse a la banda derecha
                 X = anchocuadro
             }
-            if ( Y > alturacuadro){
+            if (Y > alturacuadro) {
                 Y = -alturacoche
             }
-            if ( Y < -alturacoche){
+            if (Y < -alturacoche) {
                 Y = alturacuadro
             }
             // LO PONEMOS FINAL PARA QUE NO SE INTERCEPTE ENTRE EL CALCULO DE LOS BORDES
             coche.style.left = X + "px"
-            coche.style.bottom = Y +"px"
+            coche.style.bottom = Y + "px"
 
             // CAMBIO DE IMAGEN
-            if (event.key == "a"){ // Al pulsar la tecla a quita la clase pacman rg y pone la de iz
+            if (event.key == "a") { // Al pulsar la tecla a quita la clase pacman rg y pone la de iz
                 coche.classList.remove("pacman-rg")
                 coche.classList.add("pacman-iz")
-            } else if(event.key == "d") { // Lo mismo pero al reves
+            } else if (event.key == "d") { // Lo mismo pero al reves
                 coche.classList.remove("pacman-iz")
                 coche.classList.add("pacman-rg")
-            } else{
-                console.log("No cambia la img")
+            } else {
             }
         }
         window.addEventListener("keydown", mover)
     </script>
 </body>
-</html>
+
+</html>>
