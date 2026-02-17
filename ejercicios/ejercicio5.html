@@ -67,21 +67,21 @@
 
             // Esto para hacer que si toca el borde se vuelva a la opcion principal pero si movemos el cuadrado los pixeles no seran exactos.
 
-            // if(X >= 270){
-            //     X = 0 
-            //     coche.style.left = 0
-            // } else if(X < 0){
-            //     X = 270
-            //     coche.style.bottom = 270
-            // } else if (Y >= 240){
-            //     Y = 0
-            //     coche.style.bottom = 0
-            // } else if (Y < 0){
-            //     Y = 240
-            //     coche.style.bottom = 240
-            // }else{
-            //     console.log("0")
-            // }
+            if(X >= 270){
+                X = 0 
+                coche.style.left = 0
+            } else if(X < 0){
+                X = 270
+                coche.style.bottom = 270
+            } else if (Y >= 240){
+                Y = 0
+                coche.style.bottom = 0
+            } else if (Y < 0){
+                Y = 240
+                coche.style.bottom = 240
+            }else{
+                console.log("0")
+            }
         }
         window.addEventListener("keydown",mover)
     </script>
