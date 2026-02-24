@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mosca</title>
+    <style>
+        main{
+            display: flex;
+            justify-content: center;
+            width: 100%;
+        }
+
+        .cuadro{
+            width: 500px;
+            border: 1px solid #000;
+            height: 300px;
+            position: absolute;
+            overflow: hidden;
+        }
+
+        .mosca{
+            width: 50px;
+            height: 50px;
+            object-fit: cover;
+            position: absolute;
+            top: 130px;
+            left: 10px;
+        }
+
+        .mosca img{
+            width: 100%;
+            height: 100%;
+        }
+
+        .relative{
+            position: relative;
+        }
+
+        .fondo{
+            width: 1000px;
+            height: 300px;
+            object-fit: cover;
+        }
+
+        .fondo img{
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <div class="relative">
+            <div class="cuadro">
+                <div class="mosca">
+                    <img src="https://media.tenor.com/yzVsTWVKKmYAAAAj/pacman.gif" alt="">
+                </div>
+            </div>
+            <div class="fondo">
+                <img src="https://thumbs.dreamstime.com/b/ilustraci%C3%B3n-de-arte-p%C3%ADxeles-bits-del-campo-tulipanes-pintura-vectoriales-simple-colorida-horizontal-en-estilo-plataforma-retro-277597586.jpg" alt="">
+            </div>
+        </div>
+    </main>
+    <script>
+        let mosca = document.querySelector(".mosca")
+        let cuadro = document.querySelector(".cuadro")
+        let Y = 130
+        console.log(mosca)
+        console.log(cuadro.clientWidth)
+        console.log(cuadro.clientHeight)
+        console.log(mosca.offsetWidth)
+        console.log(mosca.offsetHeight)
+        function mover(e){
+            let anchocuadro = cuadro.clientWidth
+            let alturacuadro = cuadro.clientHeight
+            let anchomosca = mosca.offsetWidth
+            let alturaomosca = mosca.offsetHeight
+            
+            if (e.key == "w"){
+                Y = Y -5
+                mosca.style.top = Y + "px"
+            }
+            if (e.key == "s"){
+                Y = Y + 5
+                mosca.style.top = Y + "px"
+            }
+        }
+        window.addEventListener("keydown",mover)
+    </script>
+</body>
+</html>
