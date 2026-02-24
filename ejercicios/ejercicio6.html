@@ -22,11 +22,12 @@
             height: 300px;
             position: relative;
             background-color: #000;
+            border: 3px solid #888;
         }
 
         .coche {
             width: 50px;
-            height: 60px;
+            height: 50px;
             position: absolute;
             bottom: 0px;
             background-size: cover;
@@ -72,19 +73,19 @@
 
             //  TECLAS DE MOVIMIENTO
             if (event.key == "a") { // Tecla A
-                coche.style.left = X = X + -5 // Restamos cada vez 5
+                coche.style.left = X = X + -10 // Restamos cada vez 5
                 coche.style.transform = "rotate(180deg)"
             }
             if (event.key == "d") { // Tecla D
-                coche.style.left = X = X + 5 // Sumamos cada vez 5
+                coche.style.left = X = X + 10 // Sumamos cada vez 5
                 coche.style.transform = "rotate(0deg)"
             }
             if (event.key == "w") { // Tecla W
-                coche.style.bottom = Y = Y + 5
+                coche.style.bottom = Y = Y + 10
                 coche.style.transform = "rotate(-90deg)"
             }
             if (event.key == "s") { // Tecla S
-                coche.style.bottom = Y = Y + -5
+                coche.style.bottom = Y = Y + -10
                 coche.style.transform = "rotate(90deg)"
             }
             // BORDES
@@ -104,7 +105,7 @@
             coche.style.left = X + "px"
             coche.style.bottom = Y + "px"
         }
-        window.addEventListener("keydown", mover) //Keydown para que el teclado se pueda ejecutar
+        window.addEventListener("keydown", mover) //Keydown significa que pulsa la tecla hacia abajo (Pulsas la tecla)
     </script>
 </body>
 
