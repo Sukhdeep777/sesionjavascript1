@@ -31,10 +31,12 @@
             bottom: 0px;
             background-size: cover;
             object-fit: cover;
+            transform: rotate();
         }
 
         .coche img{
             width: 100%;
+            height: 100%;
         }
 
     </style>
@@ -71,15 +73,19 @@
             //  TECLAS DE MOVIMIENTO
             if (event.key == "a") { // Tecla A
                 coche.style.left = X = X + -5 // Restamos cada vez 5
+                coche.style.transform = "rotate(180deg)"
             }
             if (event.key == "d") { // Tecla D
                 coche.style.left = X = X + 5 // Sumamos cada vez 5
+                coche.style.transform = "rotate(0deg)"
             }
             if (event.key == "w") { // Tecla W
                 coche.style.bottom = Y = Y + 5
+                coche.style.transform = "rotate(-90deg)"
             }
             if (event.key == "s") { // Tecla S
                 coche.style.bottom = Y = Y + -5
+                coche.style.transform = "rotate(90deg)"
             }
             // BORDES
             if (X > anchocuadro) { // Si toca la esquina derehca lo que ara es mandar a 0 pero restandole el propio valor del coche haciendo que este fuera del cuado, asi lo hacemos como si fuera un pacman.
