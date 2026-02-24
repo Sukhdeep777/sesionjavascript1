@@ -1,6 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -19,7 +18,7 @@
 
         .cuadro {
             border: 1px solid #000;
-            width: 900px;
+            width: 600px;
             height: 300px;
             position: relative;
             background-color: #000;
@@ -30,26 +29,22 @@
             height: 60px;
             position: absolute;
             bottom: 0px;
-            background: red;
+            background-size: cover;
+            object-fit: cover;
         }
 
-        .pacman-rg {
-            background: url(https://static.wikia.nocookie.net/memes-pedia/images/7/7d/1037621961.png/revision/latest?cb=20161014185223&path-prefix=es);
-            background-size: cover;
+        .coche img{
+            width: 100%;
         }
 
-        .pacman-iz {
-            background: url(https://i.redd.it/cvr6jhcpuybd1.png);
-            background-size: cover;
-        }
     </style>
 </head>
 
 <body>
     <main>
         <div class="cuadro">
-
             <div class="coche">
+                <img src="https://media.tenor.com/yzVsTWVKKmYAAAAj/pacman.gif" alt="">
             </div>
         </div>
     </main>
@@ -66,7 +61,7 @@
         console.log(coche.offsetWidth)
         // El clientWidth = Mide el espacio que hay dentro del elemento ( Cuenta de espacio todo menos el scroll y el borde )
         // offsetWidth = Cuanto espacio ocupa (Cuenta de espacio todo )
-        function mover() {
+        function mover(event) {
             // ASIGNAR EL TAMAÑO ( COCHE Y CUADRO)
             anchocuadro = cuadro.clientWidth
             alturacuadro = cuadro.clientHeight
@@ -102,18 +97,8 @@
             // LO PONEMOS FINAL PARA QUE NO SE INTERCEPTE ENTRE EL CALCULO DE LOS BORDES
             coche.style.left = X + "px"
             coche.style.bottom = Y + "px"
-
-            // CAMBIO DE IMAGEN
-            if (event.key == "a") { // Al pulsar la tecla a quita la clase pacman rg y pone la de iz
-                coche.classList.remove("pacman-rg")
-                coche.classList.add("pacman-iz")
-            } else if (event.key == "d") { // Lo mismo pero al reves
-                coche.classList.remove("pacman-iz")
-                coche.classList.add("pacman-rg")
-            } else {
-            }
         }
-        window.addEventListener("keydown", mover)
+        window.addEventListener("keydown", mover) //Keydown para que el teclado se pueda ejecutar
     </script>
 </body>
 
