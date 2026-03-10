@@ -1,4 +1,4 @@
-# EXAMEN PRUEVA
+# EXAMEN PRUEBA
 
 ## Ejercicio 1
 1. Crea un documento html que tenga dos input de tipo texto(para el nombre y apellido) y un boton.
