@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bucles FOR</title>
+    <style>
+        .calc{
+            margin: 0px auto;
+            width: 30%;
+            height: 100%;
+            background-color: black;
+            padding: 20px;
+            border-radius: 16px;
+        }
+
+        .resultado{
+            width: 200px;
+            height: 80px;
+            background-color: rgba(128, 128, 128, 0.664);
+            border-radius: 8px;
+            margin-bottom: 10px;
+            color: white;
+            border: 1px solid white;
+        }
+
+        #numeros,#numeros2{
+            width: 200px;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        #numeros div{
+            background-color: grey;
+            padding: 20px;
+            color: white;
+            border-radius: 8px;
+            border: 1px solid black;
+        }
+
+        #numeros2 div{
+            background-color: grey;
+            padding: 20px;
+            color: white;
+            border-radius: 8px;
+            border: 1px solid black;            
+        }
+    </style>
+</head>
+<body>
+    <div class="calc">
+        <div class="resultado"></div>
+        <div id="numeros"></div>
+    </div>
+    <script>
+        // BUCLES FOR
+        let resultado= 0
+        for(let m=1;m<11;m++){ //Primera condicion entrada que el valor m es igual a 1, La condicion de salida es la que vaya repitiendo este bucle ( Que el bucle sea menor o igual a 10), en la tercera condicion ponemos que vaya sumandose cada vez es decir como se va ir incrementando.
+            //++ es el incrementador
+            resultado = 3 * m // El asterisco es para multiplicar.
+            console.log("3x "+m+"="+resultado)
+        }
+        // Hay tres pasos, el inicio(entrada), cuando tengo que salir(salida) y los pasos.
+
+        // OPCION FACIL
+
+        // let divsNumeros = `<div id ="1"> 1</div> <div id ="2"> 2</div> <div id ="3"> 3</div> <div id ="4"> 4</div> <div id ="5"> 5</div> <div id ="6"> 6</div> <div id ="7"> 7</div> <div id ="8"> 8</div> <div id ="9"> 9</div>`
+        // document.querySelector("#numeros").innerHTML = divsNumeros
+        // console.log(divsNumeros) 
+    
+
+        // Otra Opcion
+        let divsNumeros = ""
+        for(let i=1;i<10;i++){
+            divsNumeros=divsNumeros+`<div id=${i}>${i}</div>`
+        }
+        document.querySelector("#numeros").innerHTML=divsNumeros
+    </script>
+</body>
+</html>
