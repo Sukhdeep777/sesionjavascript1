@@ -6,21 +6,21 @@
     <title>Document</title>
 </head>
 <body>
-    <input type="text" id="txt">
+    <input type="number" id="txt">
     <button id="btn">Calcular</button>
     <div id="box"></div>
     <script>
-        let resultado = ""
         let btn = document.querySelector("#btn")
         let txt = document.querySelector("#txt")
         let box = document.querySelector("#box")
-        console.log(resultado)
         function click(){
+            let resultado = ""
             for(let i=1;i<11;i++){
-                total=txt.value*i
+                let total=txt.value*i
                 resultado=resultado+`<div>${txt.value}x${i}=${total}</div>`
             }
-            box.innerHTML=resultado
+            box.innerHTML= resultado
+            console.log(resultado)
         }
         btn.addEventListener("click",click)
     </script>
