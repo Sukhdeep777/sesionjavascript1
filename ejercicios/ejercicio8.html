@@ -10,18 +10,26 @@
     <button id="btn">Calcular</button>
     <div id="box"></div>
     <script>
+        // Creamos 3 variables donde seleccionamos al boton, el div i el input.
         let btn = document.querySelector("#btn")
         let txt = document.querySelector("#txt")
         let box = document.querySelector("#box")
+        // Creamos una funcion llamada Click
         function click(){
+            // Dentro de esta funcion crearemos la variable resultado sin nada para que cada vez que se ejecute la funcion se borre el resultado que habia anteriormente.
             let resultado = ""
+            // Ponemos un for para que llegue sumando de uno en uno hasta llegar al 10
             for(let i=1;i<11;i++){
+                // Creamos una variable para decir que el total es el valor del input multiplicado por el numero que va sumando en cada linea
                 let total=txt.value*i
+                // Diremos que el resultado que no hay nada es el resultada que es nada mas un div con los valores que siempre cambiaran.
                 resultado=resultado+`<div>${txt.value}x${i}=${total}</div>`
             }
+            // Pondremos que en el div ponga la variable resltado es decir la tabla de multiplicacion
             box.innerHTML= resultado
             console.log(resultado)
         }
+        // Pondremos un escuchador de eventos al boton al darle click para que haga la funcion llamada click.
         btn.addEventListener("click",click)
     </script>
 </body>
