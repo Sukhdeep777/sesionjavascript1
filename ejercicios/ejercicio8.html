@@ -10,14 +10,15 @@
     <button id="btn">Calcular</button>
     <div id="box"></div>
     <script>
-        let resultado = "0"
+        let resultado = ""
         let btn = document.querySelector("#btn")
         let txt = document.querySelector("#txt")
         let box = document.querySelector("#box")
         console.log(resultado)
         function click(){
-            for(let i;i<11;i++){
-                resultado=txt.value*i
+            for(let i=1;i<11;i++){
+                total=txt.value*i
+                resultado=resultado+`<div>${txt.value}x${i}=${total}</div>`
             }
             box.innerHTML=resultado
         }
