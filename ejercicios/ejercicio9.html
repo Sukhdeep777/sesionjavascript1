@@ -6,6 +6,9 @@
     <title>Ejercicio nuevo vectores</title>
 </head>
 <body>
+    <div class="div">
+
+    </div>
     <script>
         const personas = [ 
         ["Jordi", "Apellido"], 
@@ -17,14 +20,16 @@
         for(let i=0;i<personas.length;i++){
             console.log(personas[i][0],personas[i][1])
         }
-
+        
         const juegos = [
             ["GTA","20$","PC"],
             ["Fortnite","0$","PC/XBOX/PLAY"],
             ["Golf It","5$","PC"]
         ]
+        let div = document.querySelector(".div")
         for(let i=0;i<juegos.length;i++){
-            console.log(juegos[i][0],juegos[i][1],juegos[i][2])
+            console.log("Juego: "+juegos[i][0],"Precio: "+juegos[i][1], "Plataforma: "+juegos[i][2]);
+            div.innerHTML += juegos[i]+"<br>"
         }
     </script>
 </body>
