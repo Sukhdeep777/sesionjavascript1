@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio nuevo vectores</title>
+</head>
+<body>
+    <script>
+        const personas = [ 
+        ["Jordi", "Apellido"], 
+        ["Alicia","APELLIDO"], 
+        ["Carlos", "apellido"]
+        ]
+        // Esto es una multiarray donde tenemos un vector dentro de un vector
+        console.log(personas[2][1]) //Aqui elegimos
+        for(let i=0;i<personas.length;i++){
+            console.log(personas[i][0],personas[i][1])
+        }
+
+        const juegos = [
+            ["GTA","20$","PC"],
+            ["Fortnite","0$","PC/XBOX/PLAY"],
+            ["Golf It","5$","PC"]
+        ]
+        for(let i=0;i<juegos.length;i++){
+            console.log(juegos[i][0],juegos[i][1],juegos[i][2])
+        }
+    </script>
+</body>
+</html>

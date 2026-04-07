@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vectores</title>
+</head>
+<body>
+
+    <script>
+        console.log("Funciona!!")
+        // Cuando hacemos vectores siempre ponemos Const.
+        const frutas = ["Manzana","Naranja","Sandia","Fresa"] // Los elementos del vector lo separamos con comas dentro de corchetes.
+
+        console.log(frutas)
+        console.log("nº elementos", frutas.length)
+        console.log(frutas[2]) //Agarramos el segundo elemento que es 1 porque el primer elemento es 0 y para agarrar el segundo esta en el 1.
+        console.log(frutas[frutas.length-1]) // Para ver el ultimo sin poner el numero normal, podemos poner frutas.length i restarle 1 porque hay 3 pero en el valor del 3 es 2 a si que tenemos que restarle 1.
+        for(let i=0;i<frutas.length;i++){
+            console.log(frutas[i])
+        }
+    </script>
+</body>
+</html>
