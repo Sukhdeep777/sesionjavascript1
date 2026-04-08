@@ -151,6 +151,34 @@
         // while(condició) {
         //     //Codi que es repeteix
         // }
+
+        let i = 1; //Variable de control del bucle
+        while (i <=5) { // Mentre i sigui menor o igual a 5...
+            console.log(i) //Mostrem i
+            i = i + 1; // I després incrementa pero no quedar-se en un bucle infinit
+        } 
+
+        let comptador = 0; // Inicialitzem el comptador
+        while (comptador < 3){
+            console.log("Comptador: "+comptador)
+            comptador = comptador + 1;  //Incrementem el comptador
+        }
+    </script>
+
+    <script>
+        // BUCLES Do..WHILE ---------------------------
+        //(SINTAXI BASICA) 
+        // do {
+        //     //Codi que es repeteix
+        // } while (condició);
+
+        let valor; //Declarem la variable on guardarem el valor introduït
+        do{
+            valor = prompt("Introdueix un número major que 5:") //demanem un valor a l'usuari
+            valor = Number(valor); // El convertim a número
+        } while (valor <=5 ) //Si és 5 o menys, tornem a preguntar
+
+        console.log("Has introduït: "+valor); //Quan sigui vàlid ho mostrara
     </script>
 </body>
 </html>
