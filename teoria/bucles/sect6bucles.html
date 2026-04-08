@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bucles Web</title>
+</head>
+<body>
+    <script>
+        // OPERADORS DE COMPARACIÓ ---------------
+
+        // Igualtat (valor)
+        5 == 5; // true
+        5 == "5"; // true (conversió de tipus)
+
+        // Igualtat estricta (valor i tipus)
+        5 === 5; // true
+        5 === "5"; // false (tipus diferent)
+
+        // Desigualtat
+        5 != 10; // true
+        5 !== "5"; // true (tipus diferent)
+
+        // Major que / Major o igual
+        10 > 5; // true
+        10 >= 10; // true
+
+        // Menor que / Menor o igual
+        5 < 10; // true
+        5 <= 5; // true
+
+        // OPERADORS LÒGICS ---------------
+        
+        //AND (i) - ambdoues condicions han de ser certes
+        true && true; // true
+        true && false; // false
+
+        // OR (o) - almenys una condició ha de ser certa
+        true || false; //true
+        false || false; //false
+        
+        // NOT (no) - inverteix el valor
+        !true; //false
+        !false; //true
+
+        // ------- EXEMPLE -------------
+
+        let edat = 18;
+        let tePermis = true;
+
+        //L'usuari pot conduir si té 18 o més I té permís
+        edat >= 18 && tePermis; //true
+        //L'usuari pot entrar si és major d'edat O té permís dels pares
+        edat >= 18 || tePermis; // true
+    </script>
+
+    <script>
+        // IF Bàsic ----------------------
+        let edat1 = 20;
+        if (edat1>=18){
+            console.log("Ets major d'edat");
+        }
+
+        //IF i ELSE -----------------------
+        let edat2 = 15;
+        if (edat2 >= 18){
+            console.log("Ets major d'edat");
+        } else {
+            console.log("Ets menor d'edat")
+        }
+
+        // IF, ELSE IF i ELSE --------------
+        let nota = 10;
+        if (nota >= 9){
+            console.log("Excel·lent");
+        } else if (nota >= 7) {
+            console.log("Notable");
+        } else if (nota >= 5) {
+            console.log("Suficient");
+        } else {
+            console.log("Insuficient");
+        }
+    </script>
+
+    <script>
+        // EXEMPLE 1 : VALIDAR UNA NOTA --------
+        let nota1 = 6; // Guardem la nota en una variable
+        if (nota1 >=5){ // Si la nota és 5 o més...
+            console.log("Aprovat"); //..mostrem Aprovat
+        }
+
+        // EXEMPLE 2 : POSITIU O NEGATIU -------
+        let numero = -3; // Número a comprovar
+        if (numero >= 0) {// Si és 0 o positiu...
+            console.log("És positiu");
+        } else { // Si no...
+            console.log("És negatiu")
+        }
+
+        // EXEMPLE 3: CLASSIFICAR UNA TEMPERATURA 
+        let temperatura = 28; //Temperatura de l'exemple
+
+        if (temperatura < 10){ //Menys de 10 graus
+            console.log("Fa fred");
+        } else if (temperatura < 25) { // Entre 10-24
+            console.log("Temperatura suau");
+        } else { 
+            console.log("Fa calor")
+        }
+
+        // EXEMPLE 4: NÚMERO VÀLID o NO VÀLID ----
+        let edat3 = -2; // Valor de prova
+
+        if (edat3 >= 18) { // Major d'edat
+        console.log("Pots entrar");
+        } else if (edat3 >= 0) { // Edat correcta però menor d'edat
+        console.log("Ets menor d'edat");
+        } else { // Valor negatiu
+        console.log("Edat no vàlida");
+        }
+    </script>
+
+    <script>
+        // BUCLES FOR -----------------------------
+
+        //(SINTAXI BASICA) 
+        // for(inicialització;condició; increment) {
+        //     //Codi que es repeteix
+        // }
+
+        for(let i=1;i<=5;i=i+1){ // Començem a 1, repetim mentre i sigui
+            console.log(i); //Mostrem el valor actual de i a la consola
+        }
+
+        for(let i=0;i<5;i=i+1){ // Comencem a 0 i repetim fins a 4
+            console.log("Iteració número: "+i); //Mostrem el número d'iteració
+        }
+
+        for(let i=0;i<10;i=i+2){ // Incrementem de 2 en 2 (0,2,4...)
+            console.log(i); //Mostrem cada valor
+        }
+
+        for(let i =5;i>=1;i=i-1){ // Comencem a 5 i restem 1 cada volta fins a arribar a 1
+            console.log(i); //Mostrem el valor actual
+        }
+    </script>
+
+    <script>
+        // BUCLES WHILE ---------------------------
+        //(SINTAXI BASICA) 
+        // while(condició) {
+        //     //Codi que es repeteix
+        // }
+    </script>
+</body>
+</html>
