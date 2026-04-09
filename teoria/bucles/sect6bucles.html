@@ -180,5 +180,37 @@
 
         console.log("Has introduït: "+valor); //Quan sigui vàlid ho mostrara
     </script>
+
+    <script>
+        // EXEMPPLUES PRÀCTICS AMB BUCLUES SENSE DON NI ARRAYS
+
+        // Exemple 1 ------
+        let suma = 0;
+        for (let i=1;i<=5;i=i+1){ // Recorrem de l'1 al 5
+            suma = suma + 1; //Afegim cada número a la suma
+        }
+        console.log("Suma total: "+suma);
+
+        // Exemple 2 ------
+        for (let i =1; i<=10; i = i +1){ //De l'1 al 10
+        console.log("3x"+i+"="+(3*i)); //Mostrem cada línia de la taula
+        }
+
+        //Exemple 3 -----
+        let compte = 5; //Valor Inicial
+        while (compte>=1){ //Major o igual que 1
+            console.log("Queden: "+compte); //Mostrem el valor actual
+            compte = compte - 1; //Restem 1
+        }
+
+        //Exemple 4 ------
+        let totalParells = 0; //Comptador de números parells
+        for (let i = 1; i <=20 ; i=i+1){
+            if (i % 2 === 0){
+                totalParells = totalParells+1
+            }
+        }
+        console.log("Hi ha "+totalParells+"números parells entre 1 i 20");
+    </script>
 </body>
 </html>
