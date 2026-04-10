@@ -212,5 +212,40 @@
         }
         console.log("Hi ha "+totalParells+"números parells entre 1 i 20");
     </script>
+
+    <script>
+        // COMBINAR CONDICIONS I BUCLES
+
+        // Exemple 1 --------
+        for (let i = 1;i<=10; i = i + 1){
+            if (i % 2 === 0){ //Si el residu de dividir entre 2 és 0, el número és parell
+                console.log(i+" és parell") //Mostrem només els parells
+            }
+        }
+
+        // Exemple 2 -------
+        let positius = 0;  //Comptador de valors positius
+        for (let i = -2;i<=2;i=i + 1){ // Recorrem els valors -2,-1,0,1,2
+            if (i >0) { //Si el valor és positiu
+                positius = positius+1; //incrementem el comptador
+            }
+        }
+        console.log("Valors positius trobats: "+positius)
+
+        // Exemple 3 -------
+        for(let comptador1=1;comptador1<=12;comptador1=comptador1+1){
+            if(comptador1<5){
+                console.log(comptador1+" :tram inicial");
+            } else if (comptador1 <10){
+                console.log(comptador1 +": tram mitjà");
+            } else{
+                console.log(comptador1+": tram final")
+            }
+        }
+    </script>
+
+    <script>
+        // CONTROL DE BUCLES BREAK I CONTINUE
+    </script>
 </body>
 </html>
