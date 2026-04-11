@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercici Array's</title>
+</head>
+<body>
+    <script>
+        // Exercici 1
+        let num = [1,2,3,4,5]
+        console.log(num[0],num[4])
+
+        //Exercici 2
+        let pa = ["a","b","c","d"]
+        for(let i = 0;i < pa.length; i++){
+            console.log(`Paraula: ${i} valor`);
+        }
+
+        //Exercici 3
+        let buit= []
+        buit.push("A","B","C")
+        buit.pop()
+        console.log(buit) 
+
+        //Exercici 4  
+        let matriu = [
+            [1,2,3],
+            [4,5,6]
+        ]
+        console.log(matriu[0][1])
+        matriu[0][1] = 10
+        console.log(matriu)
+
+        //Exercici 5
+        let mat = [
+            [1,2,3],
+            [2,3,4],
+            [5,6,7]
+        ];
+        for(let fila= 0; fila<mat.length; fila++){
+            for(let columna=0;columna<mat[fila].length;columna++){
+                console.log(mat[fila][columna])
+            }
+        }
+    </script>
+</body>
+</html>
