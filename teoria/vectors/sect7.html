@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrays - Vectores</title>
+</head>
+<body>
+    <script>
+        // Un array és una estructura que permet guardar diversos valors ordenats.
+        let noms = ["Anna", "Joan", "Maria"];
+        // noms és el nom de la variable
+        // Els valors van entre []
+        // Cada valor se separa amb una coma
+
+        // La primera posició d’un array sempre és la 0 (no la 1).
+    </script>
+
+    <script>
+        // ARRAYS D'UNA DIMENSIÓ (1D)
+
+        let colors = ["vermell", "blau", "verd"];
+
+        console.log(colors); // Mostra tot l'array
+        console.log(colors[0]); // vermell
+        console.log(colors[1]); // blau
+        console.log(colors[2]); // verd
+
+        // Llegir valors per ubicació -----
+        let notes = [6, 8, 5, 9];
+
+        console.log("Primera nota: " + notes[0]);
+        console.log("Última nota: " + notes[3]);
+
+        // Modificar valors --------------
+        let notes1 = [6, 8, 5, 9];
+
+        notes1[2] = 7; // Canviem la tercera nota (índex 2)
+        console.log(notes1); // [6, 8, 7, 9] 
+
+        // Longitud de l'array ----
+        let alumnes = ["Laia", "Pau","Marta","Nil"];
+        console.log("Total alumnes: "+alumnes.length); //4 sera el resultat
+
+        //Recórrer un array amb for ------
+        let alumnes1 = ["Laia", "Pau", "Marta", "Nil"];
+
+        for (let i = 0; i < alumnes1.length; i = i + 1) {
+        console.log("Alumne " + i + ": " + alumnes1[i]);
+        }
+
+        //Afegir i treure elements --------
+        let tasques = ["HTML","CSS"];
+
+        tasques.push("JavaScript"); //Afegeiz al final
+        console.log(tasques) 
+
+        tasques.pop() //Treu l'últim element
+        console.log(tasques)
+    </script>
+
+    <script>
+        // ARRAYS DE DUELS DIMENSIONS (2D)
+        
+        // Exemple bàsic ------
+        let taula = [
+            [1,2,3],
+            [4,5,6],
+            [7,8,9]
+        ];
+        console.log(taula);
+        console.log(taula[0]);
+        console.log(taula[1][2]);
+
+        //Accedir a files i columnes
+        let notesClasse = [
+            [7,8,9], //Alumne 1
+            [5, 9, 7], // Alumne 2
+            [10, 8, 9] // Alumne 3
+        ]
+        console.log(`Nota alumne 2, examen 3: ${notesClasse[1][2]}`);
+
+            //Modificar un valor concret
+        notesClasse[0][1] = 10; //Canviem la fila 0, columna 1
+        console.log(notesClasse)
+        console.log(notesClasse[0])
+
+        //Recórrer un array 2D amb dos bucles
+        let matriu = [
+            [1,2,3],
+            [4,5,6]
+        ];
+        for (let fila = 0; fila < matriu.length; fila = fila + 1) {
+            for (let columna = 0; columna < matriu[fila].length; columna = columna + 1) {
+                console.log(`Valor[${fila}][${columna}]=${matriu[fila][columna]}`);
+            }
+        }
+        console.log(matriu.length)
+    </script>
+</body>
+</html>
