@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Champions League</h1>
+    <div id="contenidoNoticias" style="border: 1px solid black; padding: 10px;">
+        <p>Aqui iran las noticias</p>
+    </div>
+    <script>
+        console.log("hola noticias")
+        const objetoNoticia = {
+            titulo:"Remontada!", // Propiedades són lo que hay dentro de objetos
+            texto:"El Barcelona copia a Lebron",
+            img: "https://www.drivemebarcelona.com/es/blog/arte-en-barcelona/"   
+        }
+        //Los objetos se definen con llaves {}
+        console.log(objetoNoticia)
+        console.log(objetoNoticia.titulo) //Para acceder a una propiedad
+        const arrayNoticias = [
+            {
+                titulo:"Remontada!", // Propiedades són lo que hay dentro de objetos
+                texto:"El Barcelona copia a Lebron",
+                img: "https://www.barcelonacard.org/es/" 
+            }, 
+            {
+                titulo:"No Hay !", // Propiedades són lo que hay dentro de objetos
+                texto:"El Barcelona copia a Jackson",
+                img: "https://www.barcelonacard.org/es/" 
+            },
+            {
+                titulo:"Remontada del Betis!", // Propiedades són lo que hay dentro de objetos
+                texto:"El Barcelona copia a Michael",
+                img: "<img src=>" 
+            }
+        ]
+        // las arrays las hacemos con const y van con corchetes
+        console.log(arrayNoticias[2].titulo);
+        console.log(arrayNoticias[1].texto);
+        for(let i = 0; i<arrayNoticias.length;i++){
+            console.log(arrayNoticias[i].titulo);
+        }
+        // -----------------------------------------
+        let listaNoticias = "<ul>"
+        for(let i = 0; i <arrayNoticias.length; i++){
+            listaNoticias += `<li>${arrayNoticias[i].titulo}</li>`          
+        }
+        listaNoticias = listaNoticias + "</ul>"
+        document.querySelector("#contenidoNoticias").innerHTML = listaNoticias 
+
+        let cartas = "<div>";
+        for (let i = 0; i<arrayNoticias.length;i++){
+            cartas += `<h2>${arrayNoticias[i].titulo}</h2>
+            <p>${arrayNoticias[i].texto}</p>
+            <img src="${arrayNoticias[i].img}"></img>
+            `
+        }
+        cartas += "</div>" 
+        document.querySelector("#contenidoNoticias").innerHTML = cartas
+    </script>
+</body>
+</html>
