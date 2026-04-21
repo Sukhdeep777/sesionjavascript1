@@ -18,14 +18,15 @@ async function carregarCartas() {
 }
 carregarCartas()
 function renderitzarCartas(){
+    let divCartas = ""
     for(let i = 0; i <arrayCartas.length;i++){
-    console.log(arrayCartas[i].id,arrayCartas[i].nombre)
-    divCartas = divCartas + `<div class="cartas border-1 w-[213px] h-[255px] rounded-4xl shadow-lg"><img src="${arrayCartas[i].imagen}" alt=""></div>`
+        console.log(arrayCartas[i].id,arrayCartas[i].nombre)
+        divCartas = divCartas + `<div class="cartas border-1 w-[213px] h-[255px] rounded-4xl shadow-lg"><img src="${arrayCartas[i].imagen}" alt=""></div>`
     }
     console.log(divCartas)
     document.querySelector("#container").innerHTML = divCartas
 }
-let divCartas = ""
+renderitzarCartas()
 const arrayCartas = [
   {
     id: 1,
