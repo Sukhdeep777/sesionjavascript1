@@ -15,3 +15,5 @@
 
 ## Ejercicio 4
 - Crea la logica necesaria para que una de las notas es inferior a 5 el resultado de la nota sea un 4 y un texto que indique: "Hay que aprobar los 3 trimestres".
+
+
