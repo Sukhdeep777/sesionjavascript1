@@ -15,7 +15,7 @@ function cambio(){
 }
 
 function cambio2(){
-    div.innerHTML = `<img src="${texto.imagen}">`
+    div.innerHTML = `<img src="${texto.imagen}" class="object-cover w-full">`
 }
 
 function cambio3(){
