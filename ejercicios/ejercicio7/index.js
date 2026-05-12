@@ -24,18 +24,19 @@ const texto = [
 ]
 
 
-function cambio(){
-    div.innerHTML = texto[select.value].info
+function actualizar(propiedad) {
+    // Apartir de esta linea de codigo sabemos a quien estamos seleccionando en el select. Lo que hace es guardar la información del valor que hemos elegido dentro del array de objetos.
+    const personaje = texto[select.value];
+
+    // 2. Lógica para decidir qué mostrar
+    if (propiedad === "imagen") {
+        div.innerHTML = `<img src="${personaje.imagen}" class="object-cover w-[100px] m-auto">`;
+    } else {
+        // Usamos la notación de corchetes [] para acceder a 'info' o 'caracteristicas'
+        div.innerHTML = personaje[propiedad];
+    }
 }
 
-function cambio2(){
-    div.innerHTML = `<img src="${texto[select.value].imagen}" class="object-cover w-full">`
-}
-
-function cambio3(){
-    div.innerHTML = texto[select.value].caracteristicas
-}
-
-info.addEventListener("click",cambio)
-img.addEventListener("click",cambio2)
-ct.addEventListener("click",cambio3)
+info.addEventListener("click", () => actualizar("info"));
+img.addEventListener("click", () => actualizar("imagen"));
+ct.addEventListener("click", () => actualizar("caracteristicas"));
